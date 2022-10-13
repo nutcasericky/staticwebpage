@@ -5,6 +5,7 @@ from flask import Flask, render_template, request
 app = Flask(__name__)
 
 @app.route('/')
+@app.route('/index.html')
 def index():
   return render_template('index.html')
 
@@ -13,7 +14,7 @@ def no():
   return render_template('no.html')
 
 
-@app.route('https://nutcasericky.github.io/no/result', methods = ["GET", "POST"])
+@app.route('/result', methods = ["GET", "POST"])
 def result():
   if request.method == 'POST':
     output = request.form
