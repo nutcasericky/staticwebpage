@@ -20,6 +20,6 @@ if __name__ == '__main__':
   app.run(debug=True)
 
 def gay_calculator(name):
-      i = random.randint(0, 100)
-      if i > 50: return name + " you are " + str(i) +"%" + " gay, stop lying"
-      else: return name + " you are " + str(i) +"%" + " gay, amen"
+  i = random.randint(0, 100)
+  if i > 50: return name + " you are " + str(i) +"%" + " gay, stop lying"
+  else: return name + " you are " + str(i) +"%" + " gay, amen"
