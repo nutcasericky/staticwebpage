@@ -15,10 +15,10 @@ def no():
 
 @app.route('/result', methods = ["POST", "GET"])
 def result():
-  output = request.form.to_dict()
-  name = output["name"]
-  msg = gay_calculator(name)
-  return render_template("result.html", msg)
+  if request.method == 'POST':
+    output = request.form
+    msg = gay_calculator(output)
+    return render_template("result.html", msg)
 
 
 
