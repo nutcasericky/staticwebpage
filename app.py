@@ -13,7 +13,7 @@ def no():
   return render_template('no.html')
 
 
-@app.route('/no/result', methods = ["GET", "POST"])
+@app.route('https://nutcasericky.github.io/result', methods = ["GET", "POST"])
 def result():
   if request.method == 'POST':
     output = request.form
