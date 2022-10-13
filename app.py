@@ -8,12 +8,18 @@ app = Flask(__name__)
 def index():
   return render_template('index.html')
 
-@app.route('/no', methods = ["POST", "GET"])
+@app.route('/no')
 def no():
+  return render_template('no.html')
+
+
+@app.route('/result', methods = ["POST", "GET"])
+def result():
   output = request.form.to_dict()
   name = output["name"]
   msg = gay_calculator(name)
   return render_template("result.html", msg)
+
 
 
 if __name__ == '__main__':
