@@ -14,8 +14,8 @@ def no():
   return render_template('no.html')
 
 
-@app.route('/result', methods = ["GET", "POST"])
-def result():
+@app.route('/r', methods = ["GET", "POST"])
+def r():
   if request.method == 'POST':
     output = request.form
     msg = gay_calculator(output)
